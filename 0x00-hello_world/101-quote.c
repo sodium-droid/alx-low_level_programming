@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- *main - A c program that
+ * main - A c program that
  *prints to standard error (stderr)
- *Return 1 (Error)
+ * Return: 1 (Error)
  */
 int main(void)
 {
