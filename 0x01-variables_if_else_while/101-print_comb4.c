@@ -18,7 +18,7 @@ int main(void)
 				putchar(n + '0');
 				putchar(m + '0');
 				putchar(o + '0');
-	if (n != 8 || m != 9)
+	if (n != 7 || m != 8 || o != 9)
 {
 		putchar(44);
 		putchar(32);
