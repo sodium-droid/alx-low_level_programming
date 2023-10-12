@@ -17,22 +17,26 @@ int c = (i * j)
 if (c < 10)
 {
 _putchar(c + '0');
+}
+else
+{_putchar((c / 10) + '0');
+_putchar((c % 10) + '0');
+}
 if (j < 9)
+{
+if (c < 10)
 {
 _putchar(',');
 _putchar(' ');
 _putchar(' ');
 }
-}
 else
-{_putchar((c / 10) + '0');
-_putchar((c % 10) + '0');
-if (j < 9)
 {
 _putchar(',');
 _putchar(' ');
 }
 }
 _putchar('\n');
+}
 }
 }
