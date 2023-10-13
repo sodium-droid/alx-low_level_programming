@@ -2,7 +2,7 @@
 /**
  *_isdigit -function that checks
  *if 'c' is a digit.
- *@c - character to check
+ *@c: character to check
  *Return: 1 or 0
  */
 
