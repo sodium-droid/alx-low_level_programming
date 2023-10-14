@@ -7,10 +7,10 @@
 
 int main(void)
 {
-	int fib1 = 1, fib2 = 2, fib3;
+	unsigned long fib1 = 1, fib2 = 2, fib3;
 	int count;
 
-printf("%d, %d, ", fib1, fib2);
+printf("%lu, %lu, ", fib1, fib2);
 
 for (count = 2; count < 98; count++)
 {
@@ -18,11 +18,11 @@ fib3 = fib1 + fib2;
 
 if (count < 97)
 {
-	printf("%d, ", fib3);
+	printf("%lu, ", fib3);
 }
 else
 {
-printf("%d\n", fib3);
+printf("%lu\n", fib3);
 }
 	fib1 = fib2;
 	fib2 = fib3;
