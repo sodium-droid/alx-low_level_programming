@@ -1,7 +1,8 @@
 #include "main.h"
 
-/**add - a funtion that adds
- * two integers
+/**
+ *add - a funtion that adds
+ *two integers
  *@i: 1 integer
  *@j: 2 integer
  *Return: sum of integers
