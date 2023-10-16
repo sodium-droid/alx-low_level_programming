@@ -16,6 +16,12 @@ _putchar(s[i]);
 }
 _putchar('\n');
 }
+/**
+ *_strlen - function that prints
+ *the lenght of a string
+ *@s: required string
+ *Return: 0 (string lenght)
+ */
 
 int _strlen(char *s)
 {
