@@ -3,7 +3,7 @@
  *_strcpy - A function that
  *copies the string pointed to by
  *src to dest.
- @src: pointer
+ *@src: pointer
  *@dest: destination
  *Return: dest.
  */
