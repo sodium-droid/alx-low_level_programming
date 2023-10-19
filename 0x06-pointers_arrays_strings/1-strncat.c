@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *_strncpy - A function that concats
+ *_strncat - A function that concats
  *two strings based on size of n
  *@dest: string destination
  *@src: string source
@@ -8,7 +8,7 @@
  *Return: dest
  */
 
-char *_strncpy(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 int i, destlen = _strlen(dest);
 
