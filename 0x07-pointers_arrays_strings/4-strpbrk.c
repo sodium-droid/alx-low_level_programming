@@ -8,9 +8,11 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
+	int i;
+
 	while (*s != '\0')
 {
-	for (int i = 0; accept[i] != '\0'; i++)
+	for (i = 0; accept[i] != '\0'; i++)
 {
 	if (*s == accept[i])
 {
@@ -19,5 +21,5 @@ char *_strpbrk(char *s, char *accept)
 }
 	s++;
 }
-	return (NULL);
+	return (0);
 }
