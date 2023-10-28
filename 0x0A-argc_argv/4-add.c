@@ -24,7 +24,7 @@ each = argv[i];
 
 	for (j = 0; j < strlen(each); j++)
 {
-		if(each[j] < 48 || each[j] > 57)
+		if (each[j] < 48 || each[j] > 57)
 {
 		printf("Error\n");
 		return (1);
