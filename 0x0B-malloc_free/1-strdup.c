@@ -16,7 +16,7 @@ for (i = 0; str[i] != '\0'; i++)
 {
 	j++;
 }
-newstr = malloc(sizeof(char) * j);
+newstr = malloc(sizeof(*str) * j);
 if (newstr == NULL || str == NULL)
 	return (NULL);
 return (_memcpy(newstr, str, (j - 1)));
