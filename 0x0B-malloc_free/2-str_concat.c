@@ -15,10 +15,10 @@ int i = 0, j = 0;
 char *newstr;
 
 if (s1 == NULL)
-	return ("");
+	s1 = "";
 
 if (s2 == NULL)
-	return ("");
+	s2 = "";
 
 while (s1[i] != '\0')
 {
