@@ -24,7 +24,7 @@ for (i = 0; i < ac; i++)
 		size++;
 }
 
-str = malloc((size + ac) * sizeof(char));
+str = malloc((size + ac + 1) * sizeof(char));
 if (str == NULL)
 	return (NULL);
 
