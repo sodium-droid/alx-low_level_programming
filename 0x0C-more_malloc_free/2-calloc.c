@@ -20,7 +20,7 @@ str = malloc(nmemb * size);
 if (str == NULL)
 	return (NULL);
 
-for (i = 0; i < nmemb; i++)
+for (i = 0; i < (size * nmemb); i++)
 {
 str[i] = 0;
 }
