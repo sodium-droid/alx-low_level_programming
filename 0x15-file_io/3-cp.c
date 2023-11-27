@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	const char *file_from = argv[1];
 	const char *file_to = argv[2];
-	int fd_from, fd_to;
+	int fd_from, fd_to, close_file;
 	char buffer[BUFFER_SIZE];
 	ssize_t bytes_read, bytes_written;
 
@@ -33,16 +33,27 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		return (99);
 	}
-	while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
+	while (bytes_read == BUFFER_SIZE)
 	{
+		bytes_read = read(fd_from, buffer, BUFFER_SIZE);
 		if (bytes_read == -1)
 			error_exit(98, "Error: Can't read from file", fd_from, fd_to);
 		bytes_written = write(fd_to, buffer, bytes_read);
 		if (bytes_written != bytes_read)
 			error_exit(99, "Error: Can't write to file", fd_from, fd_to);
 	}
-	if (close(fd_from) == -1 || close(fd_to) == -1)
-		error_exit(100, "Error: Can't close fd", fd_from, fd_to);
+	close_file = close(fd_from);
+	if (close_file == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
+		exit(100);
+	}
+	close_file = close(fd_to);
+	if (close_file == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
+		exit(100);
+	}
 	return (0);
 }
 /**
