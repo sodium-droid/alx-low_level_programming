@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
+		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", "cp");
 		return (97);
 	}
 	fd_from = open(file_from, O_RDONLY);
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 	if (bytes_read == -1)
 		error_exit(98, "Error: Can't read from file", fd_from, fd_to);
 	if (close(fd_from) == -1 || close(fd_to) == -1)
-		error_exit(100, "Error: Can't close file descriptor", fd_from, fd_to);
+		error_exit(100, "Error: Can't close fd", fd_from, fd_to);
 	return (0);
 }
 /**
