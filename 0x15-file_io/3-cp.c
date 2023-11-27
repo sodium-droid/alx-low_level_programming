@@ -35,12 +35,12 @@ int main(int argc, char *argv[])
 	}
 	while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
+		if (bytes_read == -1)
+			error_exit(98, "Error: Can't read from file", fd_from, fd_to);
 		bytes_written = write(fd_to, buffer, bytes_read);
 		if (bytes_written != bytes_read)
 			error_exit(99, "Error: Can't write to file", fd_from, fd_to);
 	}
-	if (bytes_read == -1)
-		error_exit(98, "Error: Can't read from file", fd_from, fd_to);
 	if (close(fd_from) == -1 || close(fd_to) == -1)
 		error_exit(100, "Error: Can't close fd", fd_from, fd_to);
 	return (0);
