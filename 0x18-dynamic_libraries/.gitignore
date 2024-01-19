@@ -3,3 +3,5 @@ c_file
 len
 c_files/*
 liball.so
+advance_test_files/*
+advance_test_files
